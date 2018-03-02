@@ -19,28 +19,33 @@ int main()
     {
      cout<<"Which door do you choose? (A/B/C)\n";
      cin>>letter;
-     if (letter == 'a' || letter == 'A')
-        {
-         game.guessDoorC();
-        }
-     if (letter == 'h' || letter == 'H')
-        {
-         game.guessDoorC();
-        }
-         else
-            {
-             game.guessDoorC();
-            }
-            cout<<"Pick again for your second choice\n";
-            game.guessDoorC();
-            if (game.isWinner() == true)
-                {
-                 cout<<win++<<"You won?\n";
-                }
-                else
-                    {
-                     cout<<"You lose :(\n";
-                    }
+
+  if (letter == 'a' || letter == 'A')
+    {
+     game.guessDoorC();
+    }
+
+  if (letter == 'b' || letter == 'B')
+    {
+     game.guessDoorC();
+    }
+
+  else
+    {
+     game.guessDoorC();
+    }
+     cout<<"Pick again for your second choice\n";
+     game.guessDoorC();
+
+  if (game.isWinner() == true)
+    {
+     cout<<win++<<" You won?\n";
+    }
+
+  else
+    {
+     cout<<"You lose :(\n";
+    }
 }     
      cout<<"You won: "<<win<<endl;
     
